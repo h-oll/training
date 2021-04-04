@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Entrainement Multiplications</title>
+</head>
+
+<style>
+    div.tooltip {
+	position: absolute;
+	text-align: center;
+	/* width: 60px; */
+	/* height: 28px; */
+	padding: 2px;
+	font: 12px sans-serif;
+	background: lightsteelblue;
+	border: 0px;
+	border-radius: 8px;
+	pointer-events: none;
+    }
+
+    /* .container { float: left;} */
+        
+</style>
+
+<body>
+    <h2>Entrainement Multiplications</h2>
+    <div>
+	<input type="button" value="Nvlle Session" onclick="new_session()">
+	<p id="multi_challenge"></p>
+	<input type="number" id="multi_guess">
+	<p id="multi_result"></p>
+    </div>
+
+    <div>
+	<h3>Statistiques</h3>
+	<div>
+	    <h4>Session en cours</h5>
+	    <div id="multi_stats_current"></div>
+	    <div class="container" id="multi_stats_session"></div>
+	    <div class="container" id="multi_time_stats_session"></div>
+	</div>
+	<div>
+	    <h4>Toutes sessions confondues</h5>
+	    <div class="container" id="multi_stats_all"></div>
+	    <div class="container" id="multi_time_stats_all"></div>
+	</div>
+    </div>
+</body>
+
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+<script src="multi.js"></script>
